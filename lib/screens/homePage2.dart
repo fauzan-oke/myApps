@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'add_trx.dart'; // Import halaman add_trx.dart
+import 'homepage.dart';
 
 class HomePage2 extends StatelessWidget {
   @override
@@ -28,6 +29,10 @@ class HomePage2 extends StatelessWidget {
                 onPressed: () {
                   // Handle the first button click
                   // You can add your logic here
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AddTrx()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green,
@@ -49,7 +54,7 @@ class HomePage2 extends StatelessWidget {
                   // Pindah ke halaman add_trx.dart
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => AddTrx()),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
